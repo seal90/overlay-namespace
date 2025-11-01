@@ -45,14 +45,14 @@ The upstream request carries no namespace label, but the `user_id` matches the `
 
 | Product | Implementation | Usage |
 | --- | --- | --- |
-| **Kubernetes** | Topology | • Configure `topologyKeys`in Service   • Match based on labels of the requesting Pod and target service   • Explicit rules can enable fallback to all endpoints |
-| **Istio** | DestinationRule + Subset | • Tag service instances using subsets   • VirtualService routes requests to specific subsets based on content   • Explicit fallback rules to specific instances supported |
-| **Consul** | Intentions with Service Tags | • Tag service instances   • Requests can specify `?tag=prod`to target tagged instances   • **No automatic fallback**: request fails if the specified tag doesn't exist |
-| **Spring Cloud LoadBalancer** | ApiVersion | • Services declare an `API_VERSION` attribute   • Match the information in the request with the target service attribute information   • Configurable fallback to all instances |
-| | HintBased | • Services declare a `hint` attribute   • Match request context to service hints   • Fallback to all instances |
-| | RequestBasedStickySession | • Match cookie in request to service instance ID   • Fallback to all instances |
+| **Kubernetes** | Topology | • Configure `topologyKeys`in Service   <br>• Match based on labels of the requesting Pod and target service   <br>• Explicit rules can enable fallback to all endpoints |
+| **Istio** | DestinationRule + Subset | • Tag service instances using subsets   <br>• VirtualService routes requests to specific subsets based on content   <br>• Explicit fallback rules to specific instances supported |
+| **Consul** | Intentions with Service Tags | • Tag service instances   <br>• Requests can specify `?tag=prod`to target tagged instances   <br>• **No automatic fallback**: request fails if the specified tag doesn't exist |
+| **Spring Cloud LoadBalancer** | ApiVersion | • Services declare an `API_VERSION` attribute   <br>• Match the information in the request with the target service attribute information   <br>• Configurable fallback to all instances |
+| | HintBased | • Services declare a `hint` attribute   <br>• Match request context to service hints   <br>• Fallback to all instances |
+| | RequestBasedStickySession | • Match cookie in request to service instance ID   <br>• Fallback to all instances |
 | | Subset | • Select a subset of service instances dynamically |
-| | ZonePreference | • Services declare a `zone` attribute   • Match caller's zone with target service's zone   • Fallback to all instances |
+| | ZonePreference | • Services declare a `zone` attribute   <br>• Match caller's zone with target service's zone   <br>• Fallback to all instances |
 
 
    
