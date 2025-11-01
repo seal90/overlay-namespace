@@ -39,9 +39,11 @@ The upstream request carries no namespace label, but the `user_id` matches the `
     - If the service exists in Red → route to the Red instance. 
     - If missing in Red → fall back to the default namespace instance.
 
+![overlay_namespace_example](./pic/overlay_namespace_example.jpg)
+
 ---
 
-**Comparable Products**
+**Similar mechanism**
 
 | Product | Implementation | Usage |
 | --- | --- | --- |
